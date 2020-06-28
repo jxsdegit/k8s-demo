@@ -1,0 +1,7 @@
+image:
+  repository: gcr.azk8s.cn/google_containers/metrics-server-amd64
+
+args:
+- /metrics-server
+- --kubelet-insecure-tls
+- --kubelet-preferred-address-types=InternalIP

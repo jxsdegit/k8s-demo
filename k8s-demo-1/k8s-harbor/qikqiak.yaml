@@ -1,0 +1,29 @@
+expose:
+  type: ingress
+  tls:
+    enabled: true
+  ingress:
+    hosts:
+      core: registry.qikqiak.com
+      notary: notary.qikqiak.com
+    annotations:
+      kubernetes.io/ingress.class: "traefik"
+      ingress.kubernetes.io/ssl-redirect: "true"
+      ingress.kubernetes.io/proxy-body-size: "0"
+
+externalURL: https://registry.qikqiak.com
+
+persistence:
+  enabled: true
+  resourcePolicy: "keep"
+  persistentVolumeClaim:
+    registry:
+      storageClass: "harbor-data"
+    chartmuseum:
+      storageClass: "harbor-data"
+    jobservice:
+      storageClass: "harbor-data"
+    database:
+      storageClass: "harbor-data"
+    redis:
+      storageClass: "harbor-data"

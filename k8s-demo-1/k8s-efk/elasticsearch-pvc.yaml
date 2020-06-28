@@ -1,0 +1,13 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: data-es-cluster-0
+  namespace: logging
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "es-data-db"
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 20Gi
