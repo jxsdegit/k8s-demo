@@ -18,7 +18,7 @@ spec:
         imagePullPolicy: IfNotPresent
         # 设置钉钉群聊自定义机器人后，使用实际 access_token 替换下面 xxxxxx部分
         args:
-          - --ding.profile=webhook1=https://oapi.dingtalk.com/robot/send?access_token=d311142801cf93cc08ba19339daa1afd8f81e4da49f8be085739da2746e2dcb7
+          - --ding.profile=webhook1=https://oapi.dingtalk.com/robot/send?access_token=***********************************
         ports:
         - containerPort: 8060
           protocol: TCP
