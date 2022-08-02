@@ -19,4 +19,6 @@ curl http://localhost:9200/_cluster/state?pretty
 kubectl apply -f kibana.yaml
 
 kubectl apply -f fluentd-configmap.yaml
+
+
 kubectl apply -f fluentd-daemonset.yaml
